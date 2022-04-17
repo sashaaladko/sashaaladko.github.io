@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+header {
+    width:100%;
+    position: fixed;
+    background: rgba(93, 199, 97,0.7);
+    height: 90px; 
+    display: flex;
+
+
+}
+li{
+    display: inline;
+    padding-right: 30px;
+    font-size: 30px;
+}
+ul {
+    padding-right: 40px;
+    padding-top: 27px;
+    flex: 1;
+
+}
+.logo {
+    flex: 4;
+}
+.login, .signup {
+    color: #030ba6;
+    text-decoration: none;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+}
+.signup:hover, .login:hover {
+    color:#323dfc;
+}
+
+.welcome{
+    background-image: url(img/fon4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 403px;
+    padding: 160px;
+}
+.title{
+    color: #029907;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 70px;
+    line-height: 84px;
+    justify-content: center;
+    text-align: center;
+    padding: 76px;
+}
+blockquote{
+
+    text-align: center;
+    font-size: 20px;
+
+}
+p{
+
+    text-align: center;
+    font-size: 20px;
+}
+
+.main {
+    background-image: url(img/fon5.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 403px;
+    padding: 160px;
+}
+
+form{
+
+    text-align: center;
+}
+button{
+    background-color: #029907;
+    color: white;
+    font-size: 30px;
+    padding: 20px 40px;
+    border-radius: 8px;
+    transition: 0.7s linear;
+}
+button:hover{
+    border-radius: 20px;
+    background-color: #89e093;
+}
+
