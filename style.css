@@ -36,6 +36,7 @@ ul {
 
 .welcome{
     background-image: url(../img/fon4.jpg);
+    max-width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
