@@ -48,7 +48,7 @@ body {
 }
 
 .welcome {
-    background-image: url(img/fon5.jpeg);
+    background-image: url(../img/fon5.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -68,7 +68,7 @@ body {
 }
 
 .main {
-    background-image: url(img/fon4.jpg);
+    background-image: url(../img/fon4.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
