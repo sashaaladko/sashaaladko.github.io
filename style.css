@@ -27,7 +27,7 @@ ul {
 
 }
 .logo {
-    flex: 4;
+    flex: 3;
 }
 .login, .signup {
     color: #030ba6;
