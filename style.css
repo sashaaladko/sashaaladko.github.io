@@ -74,16 +74,9 @@ ul {
     min-height: 403px;
     height: 800px;
 }
-blockquote{
-
+blockquote, p{
     text-align: center;
-    font-size: 20px;
-
-}
-p{
-
-    text-align: center;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 
@@ -105,8 +98,8 @@ button:hover{
 }
 
 footer {
-    background-color: #333333;
-    height: 100px;
+    background-color: rgba(93, 199, 97,0.7);
+    height: 70px;
     box-sizing: border-box;
     padding-top: 0px;
     display: block;
@@ -133,7 +126,7 @@ footer p {
 }
 main {
     min-height:100%;
-height:auto !important;
-height:100%;
-margin:0 auto -100px;
+    height:auto;
+    height:100%;
+    margin:0 auto;
 }
