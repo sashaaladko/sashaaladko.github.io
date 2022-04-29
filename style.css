@@ -17,17 +17,17 @@ header {
 }
 li{
     display: inline;
-    padding-right: 30px;
+    padding-right: 50px;
     font-size: 30px;
 }
 ul {
-    padding-right: 50px;
+    padding-right: 60px;
     padding-top: 27px;
     flex: 1;
 
 }
 .logo {
-    flex: 3;
+    flex: 2;
 }
 .login, .signup {
     color: #030ba6;
