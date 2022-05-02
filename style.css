@@ -47,7 +47,7 @@ ul {
 }
 
 .welcome {
-    background-image: url(img/fon4.jpg);
+    background-image: url(../img/fon4.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -67,7 +67,7 @@ ul {
 }
 
 .main {
-    background-image: url(img/fon5.jpeg);
+    background-image: url(../img/fon5.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -126,7 +126,7 @@ footer p {
 }
 main {
     min-height:100%;
-    height:auto;
-    height:100%;
-    margin:0 auto;
+height:auto !important;
+height:100%;
+margin:0 auto;
 }
