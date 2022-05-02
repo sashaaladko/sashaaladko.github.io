@@ -3,9 +3,7 @@
     margin: 0;
     padding: 0;
 }
-* {
-    box-sizing: border-box;
-}
+
 html,
 body {
 	height: 100%;
@@ -124,9 +122,4 @@ footer p {
     width: 540px;
     height: 64px;
 }
-main {
-    min-height:100%;
-height:auto !important;
-height:100%;
-margin:0 auto;
-}
+
