@@ -18,8 +18,6 @@ header {
     background: rgba(93, 199, 97,0.7);
     height: 90px; 
     display: flex;
-
-
 }
 li{
     display: inline;
@@ -105,7 +103,12 @@ footer {
 
 .copyryght {
     text-align: center;
-    
+}
+
+.socials {
+    weight: 50px;
+    height: 50px;
+
 }
 
 footer p {
@@ -115,11 +118,9 @@ footer p {
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
-    line-height: 21px;
-    margin: auto;
-    top: 50%;
+    line-height: 10px;
 
-    width: 540px;
-    height: 64px;
 }
-
+main {
+    
+}
