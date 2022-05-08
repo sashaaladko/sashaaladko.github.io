@@ -3,55 +3,79 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="img/favicon.png">
     <title>Photo Gallery</title>
     <link rel="stylesheet" href="start.css">
+
 </head>
 
 <body>
     <header class="header">
         <a class="logo"><img src="img/logo2.png"></a>
         <ul>
-            <li><a class="login" href="log.html">Log in</a></li>
-            <li><a class="signup" href="reg.html">Sign up</a></li>
+            <li><a class="login">welcome!</a></li>
+            <li><a class="signup" href="index.html">Log out</a></li>
         </ul>
     </header>
 
 <main>
-    <div class="widget">
-        <a class="widget-title">Create a folder</a>
-        <ul class="widget-list">
+
+    <div class="folder">
+        <button id="myBtn" class="create-folder">Create a folder</button>
+        <ul class="folder-list">
           <li><a href="">My cat</a></li>
           <li><a href="">Me</a></li>
           <li><a href="">Family</a></li>
         </ul>
       </div>
 
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Name the folder</h2>
+          </div>
+          <div class="modal-body">
+            <input class="input-name">
+          </div>
+          <div class="modal-footer">
+            <button class="ok">OK</button>
+          </div>
+        </div>
+      </div>
+
+      
+
+
+      <script src="script.js"></script>
+
       <div class="container">
         <h1>My Cat</h1>
         <div class="photos">
           <div class="photo">
-            <img src="../img/cat1.jpg" style="height: 250px;">
+            <img src="img/cat1.jpg" style="height: 250px;">
             <h2 class="photo-title">cat1</h2>
             <span class="description">cat is laying</span>
           </div>
           <div class="photo">
-            <img src="../img/cat2.jpg" style="height: 250px;">
+            <img src="img/cat2.jpg" style="height: 250px;">
             <h2 class="photo-title">cat2</h2>
             <span class="description">cat is sitting</span>
           </div>
           <div class="photo">
-            <img src="../img/cat3.jpg" style="height: 250px;">
+            <img src="img/cat3.jpg" style="height: 250px;">
             <h2 class="photo-title">cat3</h2>
             <span class="description">cat is sitting</span>
           </div>
           <div class="photo">
-              <img src="../img/cat4.jpg" style="height: 250px;">
+              <img src="img/cat4.jpg" style="height: 250px;">
             <h2 class="photo-title">cat4</h2>
             <span class="description">cat is sitting</span>
           </div>
         </div>
       </div>
+      <form class="form-add" action="">
+          <button class="btn-add">+</button>
+      </form>
 
 </main>
 
