@@ -4,42 +4,12 @@
     padding: 0;
 }
 
-html,
-body {
+html {
 	height: 100%;
 }
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
-}
-
-header {
-    width:100%;
-    position: fixed;
-    background: rgba(93, 199, 97,0.7);
-    height: 90px; 
-    display: flex;
-}
-li{
-    display: inline;
-    padding-right: 50px;
-    font-size: 30px;
-}
-ul {
-    padding-right: 60px;
-    padding-top: 27px;
-    flex: 1;
-
-}
-.logo {
-    flex: 2;
-}
-.login, .signup {
-    color: #030ba6;
-    text-decoration: none;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
-}
-.signup:hover, .login:hover {
-    color:#323dfc;
+    height: 100%;
 }
 
 .welcome {
@@ -62,13 +32,16 @@ ul {
     padding: 76px;
 }
 
-.main {
+.start-section {
     background-image: url(../img/fon5.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     min-height: 403px;
     height: 800px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 blockquote, p{
     text-align: center;
@@ -76,10 +49,6 @@ blockquote, p{
 }
 
 
-form{
-
-    text-align: center;
-}
 button{
     background-color: #029907;
     color: white;
@@ -91,36 +60,4 @@ button{
 button:hover{
     border-radius: 20px;
     background-color: #89e093;
-}
-
-footer {
-    background-color: rgba(93, 199, 97,0.7);
-    height: 70px;
-    box-sizing: border-box;
-    padding-top: 0px;
-    display: block;
-}
-
-.copyryght {
-    text-align: center;
-}
-
-.socials {
-    weight: 50px;
-    height: 50px;
-
-}
-
-footer p {
-    text-align: center;
-    color: #ffffff;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 10px;
-
-}
-main {
-    
 }
