@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Gallery</title>
     <link rel="stylesheet" href="start.css">
+    <link rel="stylesheet" href="headerfooter.css">
 
 </head>
 
@@ -18,13 +20,14 @@
     </header>
 
 <main>
-
-    <div class="folder">
+     <div class="folder">
+        <button class="source source-5">Other users</button>
         <button id="myBtn" class="create-folder">Create a folder</button>
         <ul class="folder-list">
-          <li><a href="">My cat</a></li>
-          <li><a href="">Me</a></li>
-          <li><a href="">Family</a></li>
+          <li><a class="source source-1">My cat</a></li>
+          <li><a class="source source-2">Me</a></li>
+          <li><a class="source source-3">Family</a></li>
+          <li><a class="source source-4"></a></li>
         </ul>
       </div>
 
@@ -32,24 +35,19 @@
         <div class="modal-content">
           <div class="modal-header">
             <span class="close">&times;</span>
-            <h2>Name the folder</h2>
+            <span>Name the folder</span>
           </div>
           <div class="modal-body">
-            <input class="input-name">
+            <input type="text" class="input-name" placeholder="enter name">
           </div>
-          <div class="modal-footer">
+          <footer class="modal-footer">
             <button class="ok">OK</button>
-          </div>
+          </footer>
         </div>
       </div>
 
-      
-
-
-      <script src="script.js"></script>
-
-      <div class="container">
-        <h1>My Cat</h1>
+      <section class="target target-1">
+        <h1>My Cat</h1><hr>
         <div class="photos">
           <div class="photo">
             <img src="../img/cat1.jpg" style="height: 250px;">
@@ -70,13 +68,65 @@
               <img src="../img/cat4.jpg" style="height: 250px;">
             <h2 class="photo-title">cat4</h2>
             <span class="description">cat is sitting</span>
+          </div>         
+        </div>
+        <div class="drop-zone">
+          <span class="drop-zone__prompt">Drop file here or click to upload</span>
+          <input type="file" name="myFile" class="drop-zone__input">
+        </div>
+      </section>
+
+      <section class="target target-2">
+        <h1>Me</h1><hr>
+        <div class="photos">
+          <div class="photo">
+            <img src="../img/me1.jpg" style="height: 250px;">
+            <h2 class="photo-title">me1</h2>
+            <span class="description"></span>
+          </div>
+          <div class="photo">
+            <img src="../img/me2.jpg" style="height: 250px;">
+            <h2 class="photo-title">me2</h2>
+            <span class="description"></span>
+          </div>
+          <div class="photo">
+            <img src="../img/me3.jpg" style="height: 250px;">
+            <h2 class="photo-title">me3</h2>
+            <span class="description"></span>
           </div>
         </div>
-      </div>
-      <form class="form-add" action="">
-          <button class="btn-add">+</button>
-      </form>
+        <div class="drop-zone">
+          <span class="drop-zone__prompt">Drop file here or click to upload</span>
+          <input type="file" name="myFile" class="drop-zone__input">
+        </div>
+      </section>
+      
+      <section class="target target-4">
+        <h1></h1><hr>
+        <div class="drop-zone">
+          <span class="drop-zone__prompt">Drop file here or click to upload</span>
+          <input type="file" name="myFile" class="drop-zone__input">
+        </div>
+      </section>
 
+      <div class="target target-5">
+        <div class="wrap-search">
+          <label class="search">search for a user</label>
+          <input type="text" class="inputuser" id="inputuser">
+        </div>
+        <ul class="users">
+          <li><a href="otheruser.html">sasha</a></li>
+          <li>veronika</li>
+          <li>dasha</li>
+        </ul>
+      </div>
+
+      <script src="upload.js"></script>
+      <script src="folder.js"></script>
+      <script src="makefolder.js"></script>
+      <script src="modal.js"></script>
+      <script src="search.js"></script>
+      
 </main>
 
     <footer>
@@ -88,7 +138,6 @@
             <p class="copyryght">
                 Copyright 2022 - All Rights Resetved
             </p>
-
     </footer>
 </body>
 
