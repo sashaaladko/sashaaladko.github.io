@@ -10,7 +10,7 @@
 
 <body>
     <header class="header">
-        <a class="logo" href="index.html"><img src="../img/logo2.png"></a>
+        <a class="logo" href="index.html"><img src="img/logo2.png"></a>
         <ul>
             <li><a class="login" href="log.html">Log in</a></li>
             <li><a class="signup" href="reg.html">Sign up</a></li>
@@ -22,11 +22,11 @@
             <form action="start.html">
                 <h1 class="form-title"> Sign in to Photo Gallery</h1>
                 <div class="form-fields">
-                        <input class="form-field" type="email" placeholder="e-mail" required   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$">
-                        <input class="form-field" type="password" placeholder="Password" required minlength="8" maxlength="128">
+                        <input id="userinp" class="form-field" type="username" placeholder="username">
+                        <input id="passinp" class="form-field" type="password" placeholder="Password" maxlength="128">
                 </div>
                 <div class="form-buttons">
-                    <button class="button">Sign in</button>
+                    <button id="logbtn" class="button">Sign in</button>
                 </div>
              </form>
         </div>
@@ -35,7 +35,7 @@
     <footer>
         <div class="socials">
             <a target="_blank" href="https://instagram.com/lohushkam_mimo">
-                <img class="socials" src="../img/instagram1.gif" title="instagram: lohushkam_mimo">
+                <img class="socials" src="img/instagram1.gif" title="instagram: lohushkam_mimo">
             </a>
         </div>
             <p class="copyryght">
@@ -44,5 +44,57 @@
 
     </footer>
 </body>
+
+<script type="module">
+     // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyAbGwXsN1z8Vwi7UuvRO72aLegK75-FMmE",
+    authDomain: "photo-gallery-d586f.firebaseapp.com",
+    databaseURL: "https://photo-gallery-d586f-default-rtdb.firebaseio.com",
+    projectId: "photo-gallery-d586f",
+    storageBucket: "photo-gallery-d586f.appspot.com",
+    messagingSenderId: "1009388373140",
+    appId: "1:1009388373140:web:3e718d051ee7ae48eb2081"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+
+    import { getDatabase, ref, set, child, get } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-database.js";
+
+    const db = getDatabase();
+
+    
+    const username = document.getElementById('userinp');
+    const pass = document.getElementById('passinp');
+    const submit = document.getElementById('logbtn');
+
+    function AuthenticateUser(){
+        const dbref = ref(db);
+        get(child(dbRef, "UsersList/" + username.value)).then((snapshot)=>{
+            if(snapshot.exists()){
+                let dbpass = decPass(snapshot.val().password);
+                if(dbpass == pass.value){
+                    login(snapshot.val());
+                }
+                else{
+                alert("user does not exist");
+            }
+            }
+            else{
+                alert("username or password is invalid");
+            }
+        });
+    }
+    
+    submit.addEventListener('click', AuthenticateUser);
+
+    
+</script>
 
 </html>
