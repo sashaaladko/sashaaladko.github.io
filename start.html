@@ -12,7 +12,7 @@
 
 <body>
     <header class="header">
-        <a class="logo"><img src="../img/logo2.png"></a>
+        <a class="logo"><img src="img/logo2.png"></a>
         <ul>
             <li><a class="login">welcome!</a></li>
             <li><a class="signup" href="index.html">Log out</a></li>
@@ -21,14 +21,20 @@
 
 <main>
      <div class="folder">
+       <!-- <a href="listofusers.html">
         <button class="source source-5">Other users</button>
+       </a>
+        <a href="searchphotos.html">
+          <button class="searchphotos">Search photos</button>
+        </a> -->
+        <div id="root"></div>
         <button id="myBtn" class="create-folder">Create a folder</button>
         <ul class="folder-list">
           <li><a class="source source-1">My cat</a></li>
           <li><a class="source source-2">Me</a></li>
           <li><a class="source source-3">Family</a></li>
           <li><a class="source source-4"></a></li>
-        </ul>
+        </ul> 
       </div>
 
       <div id="myModal" class="modal">
@@ -50,22 +56,22 @@
         <h1>My Cat</h1><hr>
         <div class="photos">
           <div class="photo">
-            <img src="../img/cat1.jpg" style="height: 250px;">
+            <img src="img/cat1.jpg" style="height: 250px;">
             <h2 class="photo-title">cat1</h2>
             <span class="description">cat is laying</span>
           </div>
           <div class="photo">
-            <img src="../img/cat2.jpg" style="height: 250px;">
+            <img src="img/cat2.jpg" style="height: 250px;">
             <h2 class="photo-title">cat2</h2>
             <span class="description">cat is sitting</span>
           </div>
           <div class="photo">
-            <img src="../img/cat3.jpg" style="height: 250px;">
+            <img src="img/cat3.jpg" style="height: 250px;">
             <h2 class="photo-title">cat3</h2>
             <span class="description">cat is sitting</span>
           </div>
           <div class="photo">
-              <img src="../img/cat4.jpg" style="height: 250px;">
+              <img src="img/cat4.jpg" style="height: 250px;">
             <h2 class="photo-title">cat4</h2>
             <span class="description">cat is sitting</span>
           </div>         
@@ -80,17 +86,17 @@
         <h1>Me</h1><hr>
         <div class="photos">
           <div class="photo">
-            <img src="../img/me1.jpg" style="height: 250px;">
+            <img src="img/me1.jpg" style="height: 250px;">
             <h2 class="photo-title">me1</h2>
             <span class="description"></span>
           </div>
           <div class="photo">
-            <img src="../img/me2.jpg" style="height: 250px;">
+            <img src="img/me2.jpg" style="height: 250px;">
             <h2 class="photo-title">me2</h2>
             <span class="description"></span>
           </div>
           <div class="photo">
-            <img src="../img/me3.jpg" style="height: 250px;">
+            <img src="img/me3.jpg" style="height: 250px;">
             <h2 class="photo-title">me3</h2>
             <span class="description"></span>
           </div>
@@ -109,17 +115,15 @@
         </div>
       </section>
 
-      <div class="target target-5">
-        <div class="wrap-search">
-          <label class="search">search for a user</label>
-          <input type="text" class="inputuser" id="inputuser">
-        </div>
-        <ul class="users">
-          <li><a href="otheruser.html">sasha</a></li>
-          <li>veronika</li>
-          <li>dasha</li>
-        </ul>
-      </div>
+    
+      
+
+      <div id="like_button_container"></div>
+
+
+      <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<script src="foldersreact.js"></script>
 
       <script src="upload.js"></script>
       <script src="folder.js"></script>
@@ -132,7 +136,7 @@
     <footer>
         <div class="socials">
             <a target="_blank" href="https://instagram.com/lohushkam_mimo">
-                <img class="socials" src="../img/instagram1.gif" title="instagram: lohushkam_mimo">
+                <img class="socials" src="img/instagram1.gif" title="instagram: lohushkam_mimo">
             </a>
         </div>
             <p class="copyryght">
