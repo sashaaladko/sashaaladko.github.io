@@ -9,11 +9,11 @@
 </head>
 
 <body>
-    <header class="header">
-        <a class="logo" href="index.html"><img src="img/logo2.png"></a>
-        <ul>
-            <li><a class="login" href="log.html">Log in</a></li>
-            <li><a class="signup" href="reg.html">Sign up</a></li>
+    <header>
+        <a href="start.html" class="logo"><img src="img/logo2.png"></a>
+        <ul class="headermenu">
+            <li class="headerlist"><a class="login" href="log.html">log in</a></li>
+            <li class="headerlist"><a class="signup" href="reg.html">Sign up</a></li>
         </ul>
     </header>
 
@@ -22,8 +22,8 @@
 
                 <h1 class="form-title"> Sign in to Photo Gallery</h1>
                 <div class="form-fields">
-                        <input id="email" class="form-field" type="username" placeholder="email">
-                        <input id="password" class="form-field" type="password" placeholder="Password" maxlength="128">
+                        <input id="emaillog" class="form-field" type="username" placeholder="email">
+                        <input id="passwordlog" class="form-field" type="password" placeholder="Password" maxlength="128">
                 </div>
                 <div class="form-buttons">
                     <button id="logbtn" class="button">Sign in</button>
@@ -45,78 +45,8 @@
     </footer>
 </body>
 
-<script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
+<script type="module" src="consts.js"></script>
+<script type="module" src="log.js"></script>
 
-    import {
-        getAuth,
-        createUserWithEmailAndPassword,
-        signInWithEmailAndPassword,
-        signOut
-    } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js";
-    import {getDatabase, set, ref, update} from "https://www.gstatic.com/firebasejs/9.8.1/firebase-database.js";
-
-    const firebaseConfig = {
-      apiKey: "AIzaSyA9SHAbyOkqZ6zc22UgRCjnq-WDmKbpszw",
-      authDomain: "myproject-4e14b.firebaseapp.com",
-      projectId: "myproject-4e14b",
-      storageBucket: "myproject-4e14b.appspot.com",
-      messagingSenderId: "771130468719",
-      appId: "1:771130468719:web:94f26da9f7c85ccbea209a"
-    };
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth();
-    const database = getDatabase(app);
-
-    
-    var submitData = document.getElementById('logbtn');
-
-    submitData.addEventListener('click', (e) => {
-
-        var email = document.getElementById('email').value;
-        var password = document.getElementById('password').value;
-
-
-        // log in user
-        signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                // Signed in
-                const user = userCredential.user;
-                // ...
-
-                // save log in details into real time database
-                var lgDate = new Date();
-                update(ref(database, 'users/' + user.uid), {
-                    last_login: lgDate,
-                })
-                    .then(() => {
-                        // Data saved successfully!
-                        alert('user logged in successfully');
-                        document.location='start.html';
-
-                    })
-                    .catch((error) => {
-                        // The write failed...
-                        alert(error);
-                    });
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                alert(errorMessage);
-            });
-
-
-        signOut(auth).then(() => {
-               // Sign-out successful.
-        }).catch((error) => {
-            // An error happened.
-        });
-    });
-
-  </script>
 
 </html>
