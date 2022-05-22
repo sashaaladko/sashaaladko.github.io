@@ -1,0 +1,7 @@
+export const loginInput = document.querySelector('#usernamereg')
+export const emailInput = document.querySelector('#emailreg')
+export const passwordInput = document.querySelector('#passwordreg')
+export const regButton = document.querySelector('#regbtn')
+export const logEmailInput = document.querySelector('#emaillog')
+export const logPasswordInput = document.querySelector('#passwordlog')
+export const logButton = document.querySelector('#logbtn')
