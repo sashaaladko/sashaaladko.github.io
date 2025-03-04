@@ -34,7 +34,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: end;
-  background-image: url("public/img/gradient.png"), url("public/img/main_bg.png");
+  background-image: url("../public/img/gradient.png"), url("../public/img/main_bg.png");
   background-size: cover;
   padding: 0 24px;
   background-position: top center;
@@ -70,13 +70,13 @@ main {
 }
 
 .card.first-pic {
-  background-image: var(--gradient), url("public/img/bg.png");
+  background-image: var(--gradient), url("../public/img/bg.png");
 }
 .card.second-pic {
-  background-image: var(--gradient), url("public/img/bg2.png");
+  background-image: var(--gradient), url("../public/img/bg2.png");
 }
 .card.third-pic {
-  background-image: var(--gradient), url("public/img/bg3.png");
+  background-image: var(--gradient), url("../public/img/bg3.png");
 }
 
 .choose-panel {
@@ -125,7 +125,7 @@ main {
 }
 
 .panel-item.best-offer::before {
-  content: url("public/img/Path.svg");
+  content: url("../public/img/Path.svg");
   position: absolute;
   top: -1px;
   right: 0;
