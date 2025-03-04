@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test app</title>
+  </head>
+  <body>
+    <main>
+      <section class="container">
+        <a href="#" class="close-icon" aria-label="close"
+          ><img src="/img/cross.svg" alt="close"
+        /></a>
+        <h1 data-i18n="Get Unlimited <br>Access">Get Unlimited Access</h1>
+        <div class="cards-container">
+          <div class="card first-pic">
+            <span data-i18n="Unlimited Art <br>Creation">Unlimited Art Creation</span>
+          </div>
+          <div class="card second-pic">
+            <span data-i18n="Exclusive <br>Styles">Exclusive Styles</span>
+          </div>
+          <div class="card third-pic">
+            <span data-i18n="Magic Avatars <br>With 20% Off">Magic Avatars With 20% Off</span>
+          </div>
+        </div>
+        <div class="choose-panel">
+          <div
+            class="panel-item best-offer active-panel"
+            data-link="https://apple.com"
+          >
+            <div class="best-offer-container" data-i18n="BEST OFFER">best offer</div>
+            <div class="left-side">
+              <span data-i18n="YEARLY ACCESS">Yearly access</span>
+              <span data-i18n="Just {{price}} per year">Just $39.99 per year</span>
+            </div>
+            <div class="right-side" data-i18n="{{price}} <br>per week">$0.48 per week</div>
+          </div>
+          <div class="panel-item" data-link="https://google.com">
+            <div class="left-side" data-i18n="WEEKLY ACCESS"><span>Weekly access</span></div>
+            <div class="right-side" data-i18n="{{price}} <br>per week">$6.99 per week</div>
+          </div>
+        </div>
+        <button class="main-btn" data-i18n="Continue">Continue</button>
+        <div class="links-container">
+          <a href="#" data-i18n="Terms of Use">Terms of Use</a>
+          <a href="#" data-i18n="Privacy Policy">Privacy Policy</a>
+          <a href="#" data-i18n="Restore">Restore</a>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/handleClick.js"></script>
+    <script type="module" src="/src/i18n.js"></script>
+  </body>
+</html>

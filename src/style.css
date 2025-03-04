@@ -1,0 +1,240 @@
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+  color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --gradient: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.0001) 0%,
+    rgba(4, 6, 26, 0.0001) 62%,
+    rgba(6, 9, 37, 0.558287) 76%,
+    #15072f 100%
+  );
+}
+/* styles.css */
+body {
+  font-family: "SF Pro", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+main {
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  background-image: url("/img/gradient.png"), url("/img/main_bg.png");
+  background-size: cover;
+  padding: 0 24px;
+  background-position: top center;
+}
+
+.container h1 {
+  font-size: 42px;
+  font-weight: 860;
+  line-height: 46px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.cards-container {
+  display: flex;
+  gap: 6px;
+}
+
+.card {
+  border-radius: 12px;
+  position: relative;
+  width: 106px;
+  height: 139px;
+  display: flex;
+  align-items: end;
+  background-size: cover;
+}
+.card span {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 14px;
+  margin: 0 12px 8px 12px;
+}
+
+.card.first-pic {
+  background-image: var(--gradient), url("/img/bg.png");
+}
+.card.second-pic {
+  background-image: var(--gradient), url("/img/bg2.png");
+}
+.card.third-pic {
+  background-image: var(--gradient), url("/img/bg3.png");
+}
+
+.choose-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 34px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.panel-item {
+  border-radius: 100px;
+  backdrop-filter: blur(10.873126983642578px);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+}
+.panel-item.active-panel {
+  outline: 1px solid white;
+  backdrop-filter: blur(10.873126983642578px);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.panel-item .left-side {
+  display: flex;
+  flex-direction: column;
+}
+.panel-item .left-side span:first-child {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+}
+.panel-item .left-side span:nth-child(2),
+.panel-item .right-side {
+  font-size: 16px;
+  line-height: 19px;
+  opacity: 70%;
+}
+
+.panel-item.best-offer {
+  position: relative;
+}
+
+.panel-item.best-offer::before {
+  content: url("/img/Path.svg");
+  position: absolute;
+  top: -1px;
+  right: 0;
+  width: 25px;
+  height: 28px;
+}
+
+.panel-item.best-offer.active-panel .best-offer-container {
+  background: white;
+  color: #141131;
+}
+.panel-item.best-offer.active-panel::before {
+  content: '';
+}
+
+.best-offer-container {
+  border-radius: 100px;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.4959);
+  border: 1px solid transparent;
+  background: linear-gradient(90deg, #bc1fef 0%, #0035ff 100%);
+  text-align: center;
+  padding: 0 22px;
+  font-weight: 700;
+  font-size: 13px;
+  position: absolute;
+  background-clip: padding-box;
+  top: -10px;
+  right: 24px;
+}
+.best-offer-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -1px;
+  border-radius: inherit;
+  background: linear-gradient(270deg, #00b5ff 0%, #632af7 53.01%, #ff96f4 100%);
+}
+.best-offer-container::after{
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: -128px;
+  width: 128px;
+  height: 1px;
+  background: linear-gradient(
+    108.44deg,
+    rgba(253, 148, 244, 0) 25%,
+    #fd94f4 75.58%
+  );
+}
+.active-panel .best-offer-container::after {
+  background: transparent;
+}
+
+.links-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 4px;
+  margin-top: 34px;
+}
+
+.links-container a {
+  color: white;
+  opacity: 30%;
+  text-decoration: underline;
+  font-size: 13px;
+}
+.links-container.german-lang a {
+  font-size: 12px;
+}
+
+.main-btn {
+  padding: 16px 0;
+  color: #070b33;
+  background-color: white;
+  border-radius: 100px;
+  width: 100%;
+}
+
+.close-icon {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+/* чтобы на десктопе разметка не разъезжалась */
+@media screen and (min-width: 500px) {
+  main{
+    max-width: 390px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container h1{
+    margin-bottom: 16px;
+  }
+  .cards-container{
+    gap: 4px;
+  }
+  .links-container{
+    margin-top: 28px;
+    margin-bottom: 8px;
+  }
+  .choose-panel{
+    margin-bottom: 8px;
+  }
+}
